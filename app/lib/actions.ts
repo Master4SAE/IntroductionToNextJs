@@ -88,6 +88,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
   redirect('/dashboard/invoices');
 
 }
+const UpdateInvoice = FormSchema.omit({ id: true, date: true });
 export async function updateInvoice(id: string, formData: FormData) {
   const { customerId, amount, status } = UpdateInvoice.parse({
     customerId: formData.get('customerId'),
