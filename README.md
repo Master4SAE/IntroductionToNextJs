@@ -8,8 +8,9 @@ domain = introduction-to-next-js-kappa.vercel.app
 <img width="1440" alt="Screenshot 2024-04-03 at 16 07 14" src="https://github.com/Master4SAE/IntroductionToNextJs/assets/111730844/a82b6df6-491f-436c-9cfb-b61ad4e8dff2">
 <img width="1440" alt="Screenshot 2024-04-03 at 16 07 10" src="https://github.com/Master4SAE/IntroductionToNextJs/assets/111730844/a2de96b4-5c0f-4d92-8642-ef370b018628">
 
+#2 linkki julkaistuun sovellukseen (front-end), tai jos toteutit sovelluksen react nativella, tarvittavat käyttööntottoohjeet, jotta sovelluksen saa toimimaan esim. expo go:lla
+domain = introduction-to-next-js-kappa.vercel.app
 
-linkki julkaistuun sovellukseen (front-end), tai jos toteutit sovelluksen react nativella, tarvittavat käyttööntottoohjeet, jotta sovelluksen saa toimimaan esim. expo go:lla
 linkki käytössä olevaan back-end-sovellukseen/APIin
 linkki API-dokumentaatioon (apidoc)
 tietokannan kuvaus
