@@ -11,9 +11,33 @@ domain = introduction-to-next-js-kappa.vercel.app
 #2 linkki julkaistuun sovellukseen (front-end), tai jos toteutit sovelluksen react nativella, tarvittavat käyttööntottoohjeet, jotta sovelluksen saa toimimaan esim. expo go:lla
 domain = introduction-to-next-js-kappa.vercel.app
 
-linkki käytössä olevaan back-end-sovellukseen/APIin
-linkki API-dokumentaatioon (apidoc)
-tietokannan kuvaus
-listaus ja kuvaus kaikista toiminnallisuuksista, mitä olet toteuttanut
-mahdolliset tiedossa olevat bugit/ongelmat
-referenssit, käytetyt tutoriaalit, grafiikkakirjastot, tms.
+#3 tietokannan kuvaus: 
+  1. Users (Käyttäjät):
+Tämä taulu tallentaa sovelluksen käyttäjien tiedot.
+Kukin käyttäjä on uniikki, ja heillä on nimi, sähköpostiosoite ja salasana.
+Käyttäjien tietoturva on otettu huomioon salasanojen suolan ja hash-funktion käytöllä.
+  2. Invoices (Laskut):
+Tämä taulu tallentaa laskutustietoja.
+Jokainen lasku on sidoksissa asiakkaaseen (customer_id), ja sillä on määrä (amount), status (status) ja päivämäärä (date).
+Laskun tila voi olla esimerkiksi "maksamaton", "maksettu" jne.
+  3. Customers (Asiakkaat):
+Tässä taulussa säilytetään asiakkaiden tietoja.
+Jokaisella asiakkaalla on uniikki tunniste (id), nimi, sähköpostiosoite ja mahdollisesti kuvaus (image_url).
+  4. Revenue (Tulot):
+Tämä taulu tallentaa tulotietoja.
+Tulotiedot voi olla aggregaattia, kuten kuukausittainen kokonaistulo.
+Taulussa on kentät kuukaudelle (month) ja tulolle (revenue).
+
+  5. Kunkin taulun luomisen ja tietojen syöttämisen yhteydessä käytetään uuid_generate_v4() -funktiota luomaan UUID:tä (uniikki tunniste) sekä tarkistetaan konfliktit (esim. jos uniikki avain on jo olemassa). Tietokantaan luodaan myös tarvittavat laajennukset, kuten "uuid-ossp" UUID-generaattoria varten. Kaikki taulut on suunniteltu niin, että ne voidaan luoda tarvittaessa ja tietoja voidaan lisätä niiden avulla sovelluksen käyttöön. Lisäksi tietokantaan on huomioitu tietoturva-aspektit, kuten salasanojen hash-funktiot ja tietojen ainutlaatuisuuden varmistaminen.
+
+#4 listaus ja kuvaus kaikista toiminnallisuuksista, mitä olet toteuttanut
+mahdolliset tiedossa olevat bugit/ongelmat: 
+1. Responsivinen sovellus.
+2. kirjautuminen
+3. tiedot haku, poista, päivitys ja lisäys tietokantaan.
+4. next.js sovellus.
+5. käytetty Tailwind
+6. uuden asiakkaan tekeminen(saatta olla vielä kesken).
+   
+#5 referenssit, käytetyt tutoriaalit, grafiikkakirjastot, tms.
+olen käyttänyt vercel introduction kurssin tutoriaalit tämän sovelluksen tekemisen.
